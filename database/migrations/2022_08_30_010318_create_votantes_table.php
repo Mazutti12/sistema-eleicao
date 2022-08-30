@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('votantes', function (Blueprint $table) {
             $table->id();
-            $table->integer("eleitor_id")->unsigned();
-            $table->integer("periodo_id")->unsigned();
+            $table->unsignedBigInteger("eleitor_id");
+            $table->unsignedBigInteger("periodo_id");
 
-            $table->foreign("eleitor_id")->references("id")->on("eleitores")->onDelete("cascade");
-            $table->foreign("periodo_id")->references("id")->on("periodos")->onDelete("cascade");
+            $table->foreign("eleitor_id")->references("id")->on("eleitores");
+            $table->foreign("periodo_id")->references("id")->on("periodos");
             $table->timestamps();
         });
     }

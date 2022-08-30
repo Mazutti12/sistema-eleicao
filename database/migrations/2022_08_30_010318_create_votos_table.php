@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('votos', function (Blueprint $table) {
             $table->id();
             $table->dateTime("horario_voto");
-            $table->integer("candidato_id")->unsigned();
-            $table->integer("votante_id")->unsigned();
-            $table->integer("secao_id")->unsigned();
-            $table->integer("zona_id")->unsigned();
+            $table->unsignedBigInteger("candidato_id");
+            $table->unsignedBigInteger("votante_id");
+            $table->unsignedBigInteger("secao_id");
+            $table->unsignedBigInteger("zona_id");
 
-            $table->foreign("candidato_id")->references("id")->on("candidatos")->onDelete("cascade");
-            $table->foreign("votante_id")->references("id")->on("votantes")->onDelete("cascade");
-            $table->foreign("secao_id")->references("id")->on("secoes")->onDelete("cascade");
-            $table->foreign("zona_id")->references("id")->on("zonas")->onDelete("cascade");
+            $table->foreign("candidato_id")->references("id")->on("candidatos");
+            $table->foreign("votante_id")->references("id")->on("votantes");
+            $table->foreign("secao_id")->references("id")->on("secoes");
+            $table->foreign("zona_id")->references("id")->on("zonas");
 
             $table->timestamps();
         });

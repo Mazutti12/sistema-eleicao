@@ -20,11 +20,11 @@ return new class extends Migration
             $table->string("sigla_partido")->nullable();
             $table->integer("numero");
             $table->string("cargo");
-            $table->integer("periodo_id")->unsigned();
-
-            $table->foreign("periodo_id")->references("id")->on("periodos")->onDelete("cascade");
+            $table->unsignedBigInteger("periodo_id");
 
             $table->timestamps();
+
+            $table->foreign("periodo_id")->references("id")->on("periodos");
         });
     }
 
