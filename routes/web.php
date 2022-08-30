@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+############################
+##### Rotas Candidatos #####
+############################
+
+Route::get('/candidatos', [CandidatoController::class, 'index']);
+Route::get('/candidatos/{id}/show', [CandidatoController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/candidatos/create', [CandidatoController::class, 'create']);
+Route::post('/candidatos/store', [CandidatoController::class, 'store']);
+Route::get('/candidatos/{id}/edit', [CandidatoController::class, 'edit']);
+Route::post('/candidatos/update', [CandidatoController::class, 'update']);
+Route::get('/candidatos/{id}/destroy', [CandidatoController::class, 'destroy']);
