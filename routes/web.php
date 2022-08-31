@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+########################
+#### Rotas Periodos ####
+########################
+
+Route::get('/periodos', [PeriodoController::class, 'index']);
+Route::get('/periodos/create', [PeriodoController::class, 'create']);
+Route::post('/periodos/store', [PeriodoController::class, 'store']);
+Route::post('/periodos/update', [PeriodoController::class, 'update']);
+Route::get('/periodos/show/{id}', [PeriodoController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/periodos/destroy/{id}', [PeriodoController::class, 'destroy']);
+
 ############################
 ##### Rotas Candidatos #####
 ############################
