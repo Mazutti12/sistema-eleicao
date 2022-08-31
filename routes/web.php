@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EleitoresController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+###################
+####   Home    ####
+###################
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
+###################
+#### Eleitores ####
+###################
+Route::get('/eleitores', [EleitoresController::class, 'index']);
 ########################
 #### Rotas Periodos ####
 ########################
