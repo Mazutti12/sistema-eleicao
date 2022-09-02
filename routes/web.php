@@ -26,6 +26,7 @@ Route::get('/', function () {
 #### Eleitores ####
 ###################
 Route::get('/eleitores', [EleitoresController::class, 'index']);
+Route::get('/eleitores/create', [EleitoresController::class, 'create']);
 ########################
 #### Rotas Periodos ####
 ########################
