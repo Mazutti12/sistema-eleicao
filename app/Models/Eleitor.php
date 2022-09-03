@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Eleitor extends Model
 {
-    protected $table = "eleitores";
+    protected $table = 'eleitores';
 
     protected $fillable = [
+        'id',
         'nome',
         'titulo',
-        'zona',
-        'secao'
+        'secao',
+        'zona'
     ];
 }
