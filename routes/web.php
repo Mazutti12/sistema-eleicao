@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CandidatoController;
 use App\Http\Controllers\EleitoresController;
+use App\Http\Controllers\PeriodosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,12 +37,12 @@ Route::post('/eleitores/update', [EleitoresController::class, 'update']);
 #### Rotas Periodos ####
 ########################
 
-Route::get('/periodos', [PeriodoController::class, 'index']);
-Route::get('/periodos/create', [PeriodoController::class, 'create']);
-Route::post('/periodos/store', [PeriodoController::class, 'store']);
-Route::post('/periodos/update', [PeriodoController::class, 'update']);
-Route::get('/periodos/show/{id}', [PeriodoController::class, 'show'])->where('id', '[0-9]+');
-Route::get('/periodos/destroy/{id}', [PeriodoController::class, 'destroy']);
+Route::get('/periodos', [PeriodosController::class, 'index']);
+Route::get('/periodos/create', [PeriodosController::class, 'create']);
+Route::post('/periodos/store', [PeriodosController::class, 'store']);
+Route::post('/periodos/update', [PeriodosController::class, 'update']);
+Route::get('/periodos/show/{id}', [PeriodosController::class, 'show'])->where('id', '[0-9]+');
+Route::get('/periodos/destroy/{id}', [PeriodosController::class, 'destroy']);
 
 ############################
 ##### Rotas Candidatos #####
