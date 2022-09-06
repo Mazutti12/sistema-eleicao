@@ -10,7 +10,7 @@ class CandidatoController extends Controller
     function index()
     {
         $candidatos = DB::table('candidatos')
-            ->selectRaw("id, nome, partido, sigla_partido, numero, cargo, periodo_id, created_at, updated_at")
+            ->selectRaw("id, nome, partido, sigla_partido, numero, cargo, periodo_id")
             ->orderBy('nome')
             ->get();
 
@@ -65,8 +65,6 @@ class CandidatoController extends Controller
             numero,
             cargo,
             periodo_id,
-            created_at,
-            updated_at
         ")
             ->find($id);
 
