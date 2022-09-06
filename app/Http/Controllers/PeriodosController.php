@@ -17,15 +17,12 @@ class PeriodosController extends Controller
             ")
             ->get();
 
-    function create(){
-
-
         return view('periodos.index', ['periodos' => $periodos]);
     }
     public function create()
     {
         return view('periodos.create');
-        
+
     }
     public function show($id)
     {
