@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PeriodosController extends Controller
 {
@@ -19,7 +20,7 @@ class PeriodosController extends Controller
     }
 
     function create(){
-       
+
     }
     function store(){
 
