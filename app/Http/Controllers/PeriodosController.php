@@ -19,6 +19,7 @@ class PeriodosController extends Controller
 
         return view('periodos.index', ['periodos' => $periodos]);
     }
+    
     public function create()
     {
         return view('periodos.create');
