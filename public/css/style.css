@@ -1,9 +1,60 @@
-.mg-top
-{
+.mg-top {
     margin-top: 15px;
 }
 
-.mg-form{
+.mg-form {
     margin: 15px 50px;
 }
 
+ul {
+    top: 0;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    color: #04aa6d;
+}
+
+.active {
+    background-color: #04aa6d;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: auto;
+    width: 50%;
+  }
+
+p
+ {
+     text-align: justify;
+    font-size:larger;
+}
+
+h1
+ {
+     text-align: center;
+ }

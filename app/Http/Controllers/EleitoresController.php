@@ -75,13 +75,12 @@ class EleitoresController extends Controller
     {
         try {
             $data = $request->all();
+            
             unset($data['_token']);
 
-            //Descobrir como faz com modal
-            DB::table('eleitores')->update($data);
+            $id = array_shift($data);
 
-            // Eleitor::update($data);
-            // Eleitor::where('id', $id)->update();
+            Eleitor::where('id', $id)->update($data);
 
             return redirect('/eleitores');
         } catch (\Exception $e) {
