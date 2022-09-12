@@ -3,7 +3,6 @@
 @section('container')
     <div class="container">
         <div>
-            <p>ELEIÇÔES 2022</p>
             <a href="https://www.justicaeleitoral.jus.br/">
                 <img class="center"src="img/eleicoes-2022.png">
             </a>
