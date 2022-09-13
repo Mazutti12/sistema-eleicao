@@ -4,6 +4,7 @@
 
 <body>
         <ul>
+            <li><img src="img/logo.jpg"></li>
             <li><a href="..\">Home</a></li>
             <li><a href="..\periodos">Períodos</a></li>
             <li><a href="..\eleitores">Eleitores</a></li>
