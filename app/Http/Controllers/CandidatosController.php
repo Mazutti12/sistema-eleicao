@@ -17,7 +17,7 @@ class CandidatosController extends Controller
             partido,
             sigla_partido,
             numero,
-            cargo
+            cargo,
             ")
             ->orderBy('nome')
             ->get();
