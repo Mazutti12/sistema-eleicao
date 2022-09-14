@@ -4,7 +4,7 @@
     <div>
         <form class="mg-form" action="/eleitores/update" method="POST">
             @csrf
-            <input type="hidden" name="id" value="{{$eleitor->id}}">
+            <input type="hidden" name="id" value="{{ $eleitor->id }}">
 
             <label class="form-label" for="nome">Nome:</label>
             <input class="form-control" type="text" name="nome" id="nome" value="{{ $eleitor->nome }}">
