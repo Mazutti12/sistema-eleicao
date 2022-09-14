@@ -9,7 +9,7 @@
         <li><a href="..\periodos">Períodos</a></li>
         <li><a href="..\eleitores">Eleitores</a></li>
         <li><a href="..\candidatos">Candidatos</a></li>
-        <li><a href="..\votacao">Votação</a></li>
+        <li><a href="..\votos">Votação</a></li>
     </ul>
     @yield('container')
 
