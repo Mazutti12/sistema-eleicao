@@ -17,7 +17,8 @@ class CandidatosController extends Controller
             partido,
             sigla_partido,
             numero,
-            cargo
+            cargo,
+            periodo_id
             ")
             ->orderBy('nome')
             ->get();
@@ -45,15 +46,13 @@ class CandidatosController extends Controller
 
     function update(Request $request)
     {
-
         $data = $request->all();
+
         unset($data['_token']);
 
-        //Descobrir como faz com modal
-        DB::table('candidatos')->update($data);
+        $id = array_shift($data);
 
-        // Eleitor::update($data);
-        // Eleitor::where('id', $id)->update();
+        Candidato::where('id', $id)->update($data);
 
         return redirect('/candidatos');
     }

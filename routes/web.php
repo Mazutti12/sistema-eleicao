@@ -56,6 +56,7 @@ Route::get('/candidatos/show/{id}', [CandidatosController::class, 'show'])->wher
 Route::get('/candidatos/destroy/{id}', [CandidatosController::class, 'destroy']);
 
 
+
 ############################
 ##### Rotas votos ##########
 ############################
@@ -63,4 +64,3 @@ Route::get('/candidatos/destroy/{id}', [CandidatosController::class, 'destroy'])
 Route::get('/votos', [VotosController::class, 'index']);
 Route::get('/votos/create', [VotosController::class, 'create']);
 Route::post('/votos/store', [VotosController::class, 'store']);
-
