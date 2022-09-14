@@ -17,27 +17,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-###################
-####   Home    ####
-###################
+#############
+#### Home ###
+#############
 Route::get('/', function () {
     return view('home');
 });
 
-###################
+################
 #### Eleitores ####
-###################
+################
 Route::get('/eleitores', [EleitoresController::class, 'index']);
 Route::get('/eleitores/create', [EleitoresController::class, 'create']);
 Route::get('/eleitores/show/{id}', [EleitoresController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/eleitores/destroy/{id}', [EleitoresController::class, 'destroy']);
 Route::post('/eleitores/store', [EleitoresController::class, 'store']);
 Route::post('/eleitores/update', [EleitoresController::class, 'update']);
-########################
-#### Rotas Periodos ####
-########################
 
+#####################
+#### Rotas Periodos ####
+#####################
 Route::get('/periodos', [PeriodosController::class, 'index']);
 Route::get('/periodos/create', [PeriodosController::class, 'create']);
 Route::post('/periodos/store', [PeriodosController::class, 'store']);
@@ -45,10 +44,9 @@ Route::post('/periodos/update', [PeriodosController::class, 'update']);
 Route::get('/periodos/show/{id}', [PeriodosController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/periodos/destroy/{id}', [PeriodosController::class, 'destroy']);
 
-############################
+#########################
 ##### Rotas Candidatos #####
-############################
-
+#########################
 Route::get('/candidatos', [CandidatoController::class, 'index']);
 Route::get('/candidatos/{id}/show', [CandidatoController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/candidatos/create', [CandidatoController::class, 'create']);

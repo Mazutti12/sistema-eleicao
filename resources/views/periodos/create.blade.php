@@ -13,7 +13,7 @@
             <input class="form-control" type="datetime-local" name="dt_fim" id="dt_fim">
 
             <button class="btn btn-outline-success btn-sm full form-control mg-top" type="submit">Salvar</button>
-            <a class="btn btn-outline-danger btn-sm full mg-top form-control" href="/periodos/index">Voltar</a>
+            <a class="btn btn-outline-danger btn-sm full mg-top form-control" href="/periodos/">Voltar</a>
         </form>
     </div>
 @endsection
