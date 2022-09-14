@@ -6,40 +6,20 @@ nome_partido = partido.value;
 
 // json pros partido
 
-[
-    {
-        'nome':'123',
-        'sigla': '231',
-        'numero': 123,
+const partidos=[
+    {nome:'paridola'},
+    {nome:'partidoca'}
+    ]
+    const option = document.createElement("optgroup")
+    option.setAttribute('label', 'partido')
 
-    },
-    {
-        'nome':'123',
-        'sigla': '231',
-        'numero': 123,
+    partidos.forEach(sacolinha => {
+    console.log(sacolinha.nome)
 
-    },
-    {
-        'nome':'123',
-        'sigla': '231',
-        'numero': 123,
 
-    },
-    {
-        'nome':'123',
-        'sigla': '231',
-        'numero': 123,
+        option.innerHTML += '<option value="' + sacolinha.nome + '">' + sacolinha.nome + '</option>'
 
-    },
-    {
-        'nome':'123',
-        'sigla': '231',
-        'numero': 123,
-
-    },
-
-]
-
+});
 
 
 })
