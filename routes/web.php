@@ -3,6 +3,7 @@
 use App\Http\Controllers\CandidatosController;
 use App\Http\Controllers\EleitoresController;
 use App\Http\Controllers\PeriodosController;
+use App\Http\Controllers\VotosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,11 @@ Route::post('/candidatos/store', [CandidatosController::class, 'store']);
 Route::post('/candidatos/update', [CandidatosController::class, 'update']);
 Route::get('/candidatos/show/{id}', [CandidatosController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/candidatos/destroy/{id}', [CandidatosController::class, 'destroy']);
+
+############################
+##### Rotas Votos #####
+############################
+
+Route::get('/votos', [VotosController::class, 'index']);
+Route::get('/votos/create', [VotosController::class, 'create']);
+Route::post('/votos/store', [VotosController::class, 'store']);
