@@ -63,19 +63,20 @@ class EleitoresController extends Controller
             $data = $request->all();
 
             unset($data['_token']);
-
+            $data['titulo'] = str_replace('.','',$data['titulo']);
+            var_dump($data['titulo']);
             Eleitor::insert($data);
 
             return redirect('/eleitores');
         } catch (\Exception $e) {
-            return $e;
+            echo "<pre>".$e;
         }
     }
     public function update(Request $request)
     {
         try {
             $data = $request->all();
-            
+
             unset($data['_token']);
 
             $id = array_shift($data);
