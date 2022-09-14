@@ -5,7 +5,7 @@
         <form class="mg-form" action="/eleitores/store" method="POST">
             @csrf
 
-            
+
             <label class="form-label" for="nome">Nome:</label>
             <input class="form-control" type="text" name="nome" id="nome">
 
