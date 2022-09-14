@@ -10,8 +10,10 @@
             <input class="form-control" type="text" name="nome" id="nome">
 
             <label class="form-label" for="partido">Partido:</label>
-            <input class="form-control" type="text" name="partido" id="partido">
-
+            <select class="form-control" name="partido" id="partido">
+                <option value="" selected>Partidos</option>
+                <option value="teste">saf</option>
+            </select>
             <label class="form-label" for="sigla_partido">Sigla do Partido:</label>
             <input class="form-control" type="text" name="sigla_partido" id="sigla_partido" maxlength="5">
 
