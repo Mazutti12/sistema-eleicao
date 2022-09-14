@@ -75,7 +75,7 @@ class EleitoresController extends Controller
     {
         try {
             $data = $request->all();
-            
+
             unset($data['_token']);
 
             $id = array_shift($data);
