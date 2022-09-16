@@ -60,14 +60,22 @@ class EleitoresController extends Controller
     {
         try {
 
+            $data = new Eleitor;
             $data = $request->all();
-
             unset($data['_token']);
 
+            $titulo = $request->titulo;
+            $request->titulo = intval(str_replace('.', '', $titulo));
+            $data['titulo'] = $request->titulo;
+            // dd($data);
+
+            DB::beginTransaction();
             Eleitor::insert($data);
+            DB::commit();
 
             return redirect('/eleitores');
         } catch (\Exception $e) {
+            DB::rollBack();
             return $e;
         }
     }

@@ -11,7 +11,7 @@ class VotosController extends Controller
     public function index()
     {
         try {
-            $votos = Votos::leftJoin('candidatos', 'candidatos.id', '=', 'candidato.id')
+            $votos = Votos::leftJoin('candidatos', 'candidatos.id', '=', 'votos.candidato_id')
             ->select(
                 'candidatos.nome',
             )
@@ -34,10 +34,11 @@ class VotosController extends Controller
 
             Votos::insert($data);
 
-            db::commit();
+            DB::commit();
 
-            return redirect('/eleitores');
+            return redirect('/votos');
         } catch (\Exception $e) {
+            DB::rollBack();
             return $e;
         }
 
