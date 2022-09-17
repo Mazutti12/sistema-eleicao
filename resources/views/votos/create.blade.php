@@ -5,8 +5,10 @@
         <form class="mg-form" action="/votos/store" method="POST">
             @csrf
 
-            <label class="form-label" for="horario_voto">Horário do Voto:</label>
-            <input class="form-control" type="datetime-local" name="horario_voto" id="horario_voto" readonly>
+            <input class="form-control" type="datetime-local" name="horario_voto" id="horario_voto" hidden readonly>
+
+            <label class="form-label" for="titulo">Título:</label>
+            <input class="form-control" type="text" name="titulo" id="titulo" placeholder= "1111.1111.1111" onkeyup="mascara('####.####.####',this,event,true)" maxlength="14">
 
             <label class="form-label" for="zona">Zona:</label>
             <input class="form-control" type="number" name="zona" id="zona">

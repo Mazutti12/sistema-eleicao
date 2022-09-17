@@ -44,9 +44,7 @@
                 <option value="30">PARTIDO DA MULHER BRASILEIRA</option>
                 <option value="31">UNIDADE POPULAR </option>
                 <option value="32">UNIÃO BRASIL</option>
-
-
-            </select>
+                
             <label class="form-label" for="sigla_partido">Sigla do Partido:</label>
             <input class="form-control" type="text" name="sigla_partido" id="sigla_partido" maxlength="5">
 
