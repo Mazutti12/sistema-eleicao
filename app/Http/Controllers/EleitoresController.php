@@ -70,6 +70,10 @@ class EleitoresController extends Controller
             // dd($data);
 
             DB::beginTransaction();
+
+            $data['titulo'] = str_replace('.','',$data['titulo']);
+            var_dump($data['titulo']);
+
             Eleitor::insert($data);
             DB::commit();
 

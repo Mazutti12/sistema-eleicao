@@ -2,7 +2,7 @@
 
 @include('base.header', ['title' => 'ELEIÇÕES 2022'])
 
-<body>
+<body
         <ul>
             <li><a href="..\">Home</a></li>
             <li><a href="..\periodos">Períodos</a></li>
@@ -12,7 +12,5 @@
           </ul>
         @yield('container')
 
-        @include('base.footer')
-</body>
 
-</html>
+    @include('base.footer')

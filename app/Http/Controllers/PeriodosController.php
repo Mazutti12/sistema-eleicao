@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidato;
 use App\Models\Periodo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,7 @@ class PeriodosController extends Controller
 
         return view('periodos.index', ['periodos' => $periodos]);
     }
-    
+
     public function create()
     {
         return view('periodos.create');
@@ -52,14 +53,14 @@ class PeriodosController extends Controller
     public function update(Request $request)
     {
 
+
         $data = $request->all();
+
         unset($data['_token']);
 
-        //Descobrir como faz com modal
-        DB::table('periodos')->update($data);
+        $id = array_shift($data);
 
-        // Eleitor::update($data);
-        // Eleitor::where('id', $id)->update();
+        Periodo::where('id', $id)->update($data);
 
         return redirect('/periodos');
     }
